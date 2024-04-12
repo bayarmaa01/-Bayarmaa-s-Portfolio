@@ -8,7 +8,7 @@ options = webdriver.ChromeOptions()
 options.add_argument("--headless")
 options.add_argument('--no-sandbox')
 driver = webdriver.Chrome(service=service, options=options)
-driver.get("https://github.com/bayarmaa01/coffeeshop")  # Update this with the path to your HTML file
+driver.get("https://github.com/bayarmaa01/coffeeshop/")  # Update this with the path to your HTML file
 
 time.sleep(2)  # Adding a delay to see the result
 

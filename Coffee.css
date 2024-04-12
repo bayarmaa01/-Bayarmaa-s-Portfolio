@@ -3,9 +3,9 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-image: url('dd25e842a8bf3c02d8bc72f999f27a31.jpg'); /* Replace 'coffeeshop.jpg' with the path to your image */
-  background-size: cover; /* This ensures the image covers the entire background */
-  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-image: url('289a02c2a21feae9ed5dfb7787191c93.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 header {
@@ -64,4 +64,5 @@ footer {
   text-align: center;
   padding: 20px;
 }
+
 

@@ -12,9 +12,8 @@ driver.get("https://github.com/bayarmaa01/coffeeshop/")  # Update this with the 
 
 time.sleep(2)  # Adding a delay to see the result
 
-# Assert presence of an element related to Brew Haven Coffee
-brew_haven_element = driver.find_element_by_xpath("//h1[contains(text(), 'Brew Haven Coffee')]")
-assert brew_haven_element is not None, "Brew Haven Coffee element not found on the page"
+# Assert some condition to verify the result
+assert "Brew Haven Coffee" in driver.title
 
 # Take a screenshot
 timestamp = time.strftime("%Y%m%d-%H%M%S")

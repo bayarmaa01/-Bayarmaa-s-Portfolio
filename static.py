@@ -10,10 +10,9 @@ options.add_argument('--no-sandbox')
 driver = webdriver.Chrome(service=service, options=options)
 driver.get("https://github.com/bayarmaa01/coffeeshop/")  # Update this with the path to your HTML file
 
-time.sleep(5)  # Adding a delay to see the result
+time.sleep(2)  # Adding a delay to see the result
 
 # Assert some condition to verify the result
-print("Page Title:", driver.title)
 assert "Brew Haven Coffee" in driver.title
 
 # Take a screenshot

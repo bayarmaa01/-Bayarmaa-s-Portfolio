@@ -1,68 +1,150 @@
-/* styles.css */
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-image: url('289a02c2a21feae9ed5dfb7787191c93.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: rgb(2, 39, 39);
+    background-color:teal;
 }
 
 header {
-  background-color: #1E8449;
-  color: white;
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    background-color:teal;
+    color:rgb(2, 39, 39);
+    text-align: center;
+    padding: 1em 0;
 }
 
 nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul li {
-  display: inline;
-  margin-right: 20px;
+    margin: 0 15px;
 }
 
 nav ul li a {
-  text-decoration: none;
-  color: white;
+    color: rgb(2, 39, 39);
+    text-decoration: none;
+    font-weight: bold;
 }
 
 section {
-  padding: 50px 20px;
+    padding: 20px;
+    margin: 20px;
+    background-color:rgb(32, 168, 162);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-section h2 {
-  margin-bottom: 20px;
+select {
+    width: calc(102% - 10px);
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: rgb(2, 39, 39);
+    background-color: white;
+    border: 1px solid black;
 }
-
 button {
-  background-color: #1E8449;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
+    background: rgb(2, 39, 39);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
 }
 
-.menu-item {
-  margin-bottom: 20px;
+button:hover {
+    background: rgb(63, 197, 190) ;
+    color: rgb(2, 39, 39);
 }
 
-.menu-item h3 {
-  margin-top: 0;
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+.profile{
+    display: flex;
+    justify-content: center; 
+    gap: 8px;
+}
+.profile-pic {
+    width: 300px;
+    height: 300px;
+    border-radius: 10%; 
+    border: 5px solid teal; 
+    display: block;
+    margin: 0 auto; 
+    object-fit: cover;
+}
+table, th, td {
+    border: 1px solid teal;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: rgb(63, 197, 190);
+    color: rgb(2, 59, 59);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background: rgb(63, 197, 190);
+    color: rgb(2, 39, 39);
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+form label {
+    display: block;
+    margin-top: 10px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid rgb(2, 39, 39);
+    border-radius: 4px;
+}
+
+form input[type="submit"] {
+    width: auto;
+    background-color: teal;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+form input[type="submit"]:hover {
+    background-color:teal;
 }
 
 footer {
-  background-color: #1E8449;
-  color: white;
-  text-align: center;
-  padding: 20px;
+    background-color: teal;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
-
 

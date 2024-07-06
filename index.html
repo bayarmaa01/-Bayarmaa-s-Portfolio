@@ -1,75 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brew Haven Coffee</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bayarmaa's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1 id="timestamp"></h1>
-    <h1>Brew Haven Coffee</h1>
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#menu">Menu</a></li>
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#locations">Locations</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header>
+        <h1>Bayarmaa's Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#hobbies">Hobbies</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="about">
+        <h2>About Me</h2>
+        <p>My name is Bayarmaa, and I am from Mongolia.<br> I am currently pursuing a Bachelor of Technology
+             (B.Tech) degree in Computer Science Engineering (CSE), with a strong foundation in software engineering
+              and DevOps. <br>Proficient in languages such as C, C++, Java, Python, HTML, and JavaScript,
+               I excel in translating business requirements into innovative software solutions. <br>My expertise extends to creating CI/CD pipelines using GitHub Actions
+             Docker, Kubernetes, and Jenkins, enhancing workflow efficiency and reliability. </p>
+             <p> I am known for my excellent teamwork, interpersonal skills, 
+                and commitment to continuous learning.
+                 Eager to launch my career as an entry-level professional with a reputed IT company,
+                  I bring dedication and a proactive approach to every endeavor.
 
-  <section id="home">
-    <h2>Welcome to Brew Haven Coffee</h2>
-    <p>A cozy place to enjoy your favorite brew.</p>
-    <button>Order Now</button>
-  </section>
-
-  <section id="menu">
-    <h2>Our Menu</h2>
-    <div class="menu-item">
-      <h3>Espresso</h3>
-      <p>Strong and flavorful, perfect for a quick pick-me-up.</p>
-      <span>$2.50</span>
-    </div>
-    <!-- More menu items here -->
-  </section>
-
-  <section id="about">
-    <h2>About Us</h2>
-    <p>Brew Haven Coffee was founded in 2010 with a passion for serving the finest coffee to our community.</p>
-  </section>
-
-  <section id="locations">
-    <h2>Our Locations</h2>
-    <p>Find a Brew Haven Coffee near you:</p>
-    <ul>
-      <li>123 Main St, Cityville</li>
-      <li>456 Elm St, Townville</li>
-    </ul>
-  </section>
-
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p>Have a question or feedback? Reach out to us!</p>
-    <form>
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" required></textarea>
-      <button type="submit">Send</button>
-    </form>
-  </section>
-
-  <footer>
-    <p>&copy; 2024 Brew Haven Coffee. All rights reserved.</p>
-  </footer>
-
-  <script src="script.js"></script>
+             </p>
+        <p><b><i>Clients can get in touch with me by filling out the form below.</i></b></p>
+        <form id="contactForm" onsubmit="return handleSubmit(event)">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name"><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"><br>
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address"><br>
+            <label for="query">Query:</label>
+            <textarea id="query" name="query"></textarea><br>
+            
+            <label for="country">Country</label>
+                <select name="country" id="country" required>
+                    <option value="mon">Mongolia</option>
+                    <option value="india">India</option>
+                    <option value="syria">Syria</option>
+                    <option value="uk">UK</option>
+                    <option value="japan">Japan</option>
+                </select>
+            
+                <div>
+                    <button type="submit">Submit</button>
+                </div>
+        </form>
+        <p id="successMessage" style="display:none; color: rgb(2, 39, 39);">Form submitted successfully!</p>
+    </section>
+    
+    <section id="profile-picture">
+        <h2>Profile Picture</h2>
+        <div class="profile">
+        <img src="pro.jpg" alt="Profile Picture" class="profile-pic">
+        <img src="pro1.jpg" alt="Profile Picture 2" class="profile-pic">
+        <img src="pro2.jpg" alt="Profile Picture 2" class="profile-pic">
+        </div>
+    </section>
+    
+    <section id="skills">
+        <h2>Skills</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Technical Skills</th>
+                    <th>Non-Technical Skills</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <ul>
+                            <li>C, C++, Java</li>
+                            <li>HTML, CSS, Python</li>
+                            <li>AWS, Azure</li>
+                            <li>Git, Jenkins, Kubernetes</li>
+                            <li>GitHub, Linux</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Problem-solving</li>
+                            <li>Continuous learning</li>
+                            <li>Fast learner</li>
+                            <li>Good listener</li>
+                            <li>Unwavering determination</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3 style="color: rgb(5, 53, 53);"><a href="https://bayarmaa01.github.io/lpu/">CI/CD Pipeline for Automated Deployment | GitHub</a></h3>
+            <p><strong>Duration:</strong> May '24 - Aug '24</p>
+            <p><strong>Description:</strong> Developed a continuous integration and continuous deployment (CI/CD) pipeline using GitHub Actions to automate the build, test, and deployment processes for a web application.</p>
+            <p><strong>Technologies Used:</strong> GitHub Actions, Docker, Kubernetes, Jenkins</p>
+            <p><strong>Key Features:</strong></p>
+            <ul>
+                <li>Automated build and testing of code on every push to the repository</li>
+                <li>Containerized application using Docker</li>
+                <li>Deployed application to Kubernetes cluster</li>
+                <li>Integrated notifications for build and deployment status</li>
+            </ul>
+            <p><strong>Role:</strong> Designed and implemented the pipeline, configured the necessary workflows in GitHub Actions, and set up the Docker and Kubernetes environments.</p>
+        </div>
+    </section>
+    
+    <section id="hobbies">
+        <h2>Hobbies</h2>
+        <ul>
+            <li>Coding and programming</li>
+            <li>Reading</li>
+            <li>Listening to music</li>
+            <li>Watching movies</li>
+            <li>Cycling</li>
+            <li>Dancing</li>
+            <li>Picnicking</li>
+            <li>Traveling</li>
+            <li>Badminton</li>
+            <li>Drawing art</li>
+            <li>Designing websites</li>
+        </ul>
+    </section>
+    
+    <section id="education">
+        <h2>Education</h2>
+        <ul>
+            <li><strong>Higher School</strong></li>
+            <li>Sep '09 - Mar '21</li>
+            <li>GENERAL EDUCATIONAL HIGH SCHOOL of Chuluut soum, Arkhangai province | Ulaanbaatar, MN</li>
+            <li>CGPA: 10</li>
+        </ul>
+    </section>
+    
+    <section id="contact">
+        <h2><b>Contact</b></h2>
+        <p><b>Email:</b> <a href="mailto:B.bayarmaa0321@gmail.com">B.bayarmaa0321@gmail.com</a></p>
+        <p><b>Contact Number: </b><a href="tel:+917658055233">+91 7658055233</a></p>
+        <address>
+            Chingeltei District,<br>
+            Ulaanbaatar,
+            Mongolia
+        </address>
+    </section>
+    
+    <section id="declaration">
+        <h2>Declaration</h2>
+        <p>I hereby declare that the information provided is true and correct to the best of my knowledge.</p>
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 Bayarmaa's Portfolio</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
 

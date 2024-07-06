@@ -1,11 +1,8 @@
-// Add JavaScript functionality here
-console.log("Script loaded!");
+function handleSubmit(event) {
+    event.preventDefault(); 
+    document.getElementById('successMessage').style.display = 'block';
+    document.getElementById('contactForm').reset();
 
-// Example console output
-console.log("This is a console log message.");
+    return false; 
+}
 
-// You can add more console logs as needed
-const timestampElement = document.getElementById('timestamp');
-const date = new Date();
-const timestamp = date.toLocaleString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true });
-timestampElement.textContent = timestamp.toUpperCase();

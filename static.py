@@ -13,7 +13,7 @@ driver.get("https://bayarmaa01.github.io/coffeeshop/")  # Update this with the p
 time.sleep(2)  # Adding a delay to see the result
 
 # Assert some condition to verify the result
-assert "Brew Haven Coffee" in driver.title
+assert "Bayarmaa's Portfolio" in driver.title
 
 # Take a screenshot
 timestamp = time.strftime("%Y%m%d-%H%M%S")

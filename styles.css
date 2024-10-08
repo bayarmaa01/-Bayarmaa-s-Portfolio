@@ -1,142 +1,181 @@
-body {
-    font-family: Arial, sans-serif;
+/* Reset some default browser styling */
+* {
     margin: 0;
     padding: 0;
-    color: rgb(2, 39, 39);
-    background-color:teal;
+    box-sizing: border-box;
 }
 
-header {
-    background-color:teal;
-    color:rgb(2, 39, 39);
-    text-align: center;
-    padding: 1em 0;
-}
-
-nav ul {
-    list-style: none;
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
     padding: 0;
+}
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Makes the image circular */
+    border: 3px solid #0066cc; /* Adds a blue border */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    display: block;
+    margin: 20px auto; /* Centers the image */
+}
+
+/* Navigation bar styling */
+nav {
+    background-color: #1f1f1f;
+    color: white;
+    padding: 1.5rem;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
 }
 
-nav ul li {
-    margin: 0 15px;
+.nav-links {
+    list-style: none;
+    display: flex;
 }
 
-nav ul li a {
-    color: rgb(2, 39, 39);
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
     text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: #444;
+}
+
+.logo {
+    font-size: 1.5rem;
     font-weight: bold;
 }
 
+/* General section styling */
 section {
-    padding: 20px;
-    margin: 20px;
-    background-color:rgb(32, 168, 162);
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-select {
-    width: calc(102% - 10px);
-    padding: 20px;
-    margin-bottom: 15px;
-    border-radius: 4px;
-    box-sizing: border-box;
-    font-size: 16px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    color: rgb(2, 39, 39);
+    padding: 4rem;
     background-color: white;
-    border: 1px solid black;
-}
-button {
-    background: rgb(2, 39, 39);
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
+    margin: 2rem auto;
+    max-width: 1100px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-button:hover {
-    background: rgb(63, 197, 190) ;
-    color: rgb(2, 39, 39);
+h2 {
+    color: #444;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    border-bottom: 2px solid #0066cc;
+    display: inline-block;
+    padding-bottom: 0.5rem;
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
-}
-.profile{
-    display: flex;
-    justify-content: center; 
-    gap: 8px;
-}
-.profile-pic {
-    width: 300px;
-    height: 300px;
-    border-radius: 10%; 
-    border: 5px solid teal; 
-    display: block;
-    margin: 0 auto; 
-    object-fit: cover;
-}
-table, th, td {
-    border: 1px solid teal;
+h3 {
+    color: #333;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
 }
 
-th, td {
-    padding: 10px;
-    text-align: left;
+p {
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.7;
 }
 
-th {
-    background-color: rgb(63, 197, 190);
-    color: rgb(2, 59, 59);
+/* Project and experience sections */
+.project, .experience {
+    margin-bottom: 2rem;
 }
 
 ul {
-    list-style: none;
+    list-style-type: none;
     padding: 0;
 }
 
 ul li {
-    background: rgb(63, 197, 190);
-    color: rgb(2, 39, 39);
-    margin: 5px 0;
-    padding: 10px;
-    border-radius: 5px;
+    margin-bottom: 10px;
 }
 
-form label {
-    display: block;
-    margin-top: 10px;
+a {
+    color: #0066cc;
+    text-decoration: none;
 }
 
-form input, form textarea {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    border: 1px solid rgb(2, 39, 39);
-    border-radius: 4px;
+a:hover {
+    text-decoration: underline;
 }
 
-form input[type="submit"] {
-    width: auto;
-    background-color: teal;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    margin-top: 10px;
+.skills-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
 }
 
-form input[type="submit"]:hover {
-    background-color:teal;
+.skills-grid div {
+    flex-basis: 30%;
 }
+
+.skills-grid h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #0066cc;
+}
+
+/* Education section */
+.education {
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-left: 4px solid #0066cc;
+    margin-bottom: 2rem;
+}
+
+.education h3 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.education p {
+    margin-bottom: 0.5rem;
+}
+
+/* Contact section */
+.contact ul {
+    padding-left: 0;
+}
+
+.contact ul li {
+    margin-bottom: 10px;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .skills-grid {
+        flex-direction: column;
+    }
+
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        margin-top: 1rem;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+}
+
 
 footer {
     background-color: teal;

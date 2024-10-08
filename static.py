@@ -13,7 +13,7 @@ driver.get("https://bayarmaa01.github.io/-Bayarmaa-s-Portfolio/")  # Update this
 time.sleep(2)  # Adding a delay to see the result
 
 # Assert some condition to verify the result
-assert "Bayarmaa's Portfolio" in driver.title
+assert "Bayarmaa Bumandorj | Portfolio" in driver.title
 
 # Take a screenshot
 timestamp = time.strftime("%Y%m%d-%H%M%S")

@@ -3,167 +3,178 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bayarmaa's Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Bayarmaa Bumandorj | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+        .nav-links li {
+            margin-left: 20px;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+        }
+        section {
+            padding: 2rem;
+            background-color: white;
+            margin: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333;
+        }
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        ul li {
+            margin-bottom: 10px;
+        }
+        .skills-grid {
+            display: flex;
+            justify-content: space-between;
+        }
+        .skills-grid div {
+            width: 30%;
+        }
+        .contact ul {
+            padding-left: 0;
+        }
+        .contact ul li {
+            margin-bottom: 5px;
+        }
+        a {
+            color: #0066cc;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Bayarmaa's Portfolio</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#hobbies">Hobbies</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <section id="about">
-        <h2>About Me</h2>
-        <p>My name is Bayarmaa, and I am from Mongolia.<br> I am currently pursuing a Bachelor of Technology
-             (B.Tech) degree in Computer Science Engineering (CSE), with a strong foundation in software engineering
-              and DevOps. <br>Proficient in languages such as C, C++, Java, Python, HTML, and JavaScript,
-               I excel in translating business requirements into innovative software solutions. <br>My expertise extends to creating CI/CD pipelines using GitHub Actions
-             Docker, Kubernetes, and Jenkins, enhancing workflow efficiency and reliability. </p>
-             <p> I am known for my excellent teamwork, interpersonal skills, 
-                and commitment to continuous learning.
-                 Eager to launch my career as an entry-level professional with a reputed IT company,
-                  I bring dedication and a proactive approach to every endeavor.
 
-             </p>
-        <p><b><i>Clients can get in touch with me by filling out the form below.</i></b></p>
-        <form id="contactForm" onsubmit="return handleSubmit(event)">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name"><br>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email"><br>
-            <label for="address">Address:</label>
-            <input type="text" id="address" name="address"><br>
-            <label for="query">Query:</label>
-            <textarea id="query" name="query"></textarea><br>
-            
-            <label for="country">Country</label>
-                <select name="country" id="country" required>
-                    <option value="mon">Mongolia</option>
-                    <option value="india">India</option>
-                    <option value="syria">Syria</option>
-                    <option value="uk">UK</option>
-                    <option value="japan">Japan</option>
-                </select>
-            
-                <div>
-                    <button type="submit">Submit</button>
-                </div>
-        </form>
-        <p id="successMessage" style="display:none; color: rgb(2, 39, 39);">Form submitted successfully!</p>
-    </section>
+<nav>
+    <div class="logo">Bayarmaa Bumandorj</div>
+    <ul class="nav-links">
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#certificates">Certificates</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<section id="about">
+    <h2>About Me</h2>
+    <img src="pro.jpg" alt="Bayarmaa Bumandorj" class="profile-pic">
+    <p>Hello! I’m Bayarmaa Bumandorj, a passionate Computer Science and Engineering student from Lovely Professional University. I enjoy creating automation solutions, contributing to open-source projects, and addressing environmental issues through volunteer work. My journey in software development is driven by curiosity and a desire to solve real-world problems using technology.</p>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
     
-    <section id="profile-picture">
-        <h2>Profile Picture</h2>
-        <div class="profile">
-        <img src="pro.jpg" alt="Profile Picture" class="profile-pic">
-        <img src="pro1.jpg" alt="Profile Picture 2" class="profile-pic">
-        <img src="pro2.jpg" alt="Profile Picture 2" class="profile-pic">
-        </div>
-    </section>
-    
-    <section id="skills">
-        <h2>Skills</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Technical Skills</th>
-                    <th>Non-Technical Skills</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>
-                        <ul>
-                            <li>C, C++, Java</li>
-                            <li>HTML, CSS, Python</li>
-                            <li>AWS, Azure</li>
-                            <li>Git, Jenkins, Kubernetes</li>
-                            <li>GitHub, Linux</li>
-                        </ul>
-                    </td>
-                    <td>
-                        <ul>
-                            <li>Problem-solving</li>
-                            <li>Continuous learning</li>
-                            <li>Fast learner</li>
-                            <li>Good listener</li>
-                            <li>Unwavering determination</li>
-                        </ul>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
-    
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project">
-            <h3 style="color: rgb(5, 53, 53);"><a href="https://bayarmaa01.github.io/lpu/">CI/CD Pipeline for Automated Deployment | GitHub</a></h3>
-            <p><strong>Duration:</strong> May '24 - Aug '24</p>
-            <p><strong>Description:</strong> Developed a continuous integration and continuous deployment (CI/CD) pipeline using GitHub Actions to automate the build, test, and deployment processes for a web application.</p>
-            <p><strong>Technologies Used:</strong> GitHub Actions, Docker, Kubernetes, Jenkins</p>
-            <p><strong>Key Features:</strong></p>
-            <ul>
-                <li>Automated build and testing of code on every push to the repository</li>
-                <li>Containerized application using Docker</li>
-                <li>Deployed application to Kubernetes cluster</li>
-                <li>Integrated notifications for build and deployment status</li>
-            </ul>
-            <p><strong>Role:</strong> Designed and implemented the pipeline, configured the necessary workflows in GitHub Actions, and set up the Docker and Kubernetes environments.</p>
-        </div>
-    </section>
-    
-    <section id="hobbies">
-        <h2>Hobbies</h2>
+    <div class="project">
+        <h3>CI/CD Pipeline for Automated Deployment</h3>
+        <p>Developed a continuous integration and continuous deployment (CI/CD) pipeline using GitHub Actions to automate build, test, and deployment processes for a web application.</p>
         <ul>
-            <li>Coding and programming</li>
-            <li>Reading</li>
-            <li>Listening to music</li>
-            <li>Watching movies</li>
-            <li>Cycling</li>
-            <li>Dancing</li>
-            <li>Picnicking</li>
-            <li>Traveling</li>
-            <li>Badminton</li>
-            <li>Drawing art</li>
-            <li>Designing websites</li>
+            <li><strong>Technologies Used:</strong> GitHub Actions, Docker, Kubernetes, Jenkins</li>
+            <li><strong>Key Features:</strong>
+                <ul>
+                    <li>Automated build and testing of code on every push to the repository</li>
+                    <li>Containerized application using Docker</li>
+                    <li>Deployed application to a Kubernetes cluster</li>
+                    <li>Integrated notifications for build and deployment status</li>
+                </ul>
+            </li>
+            <li><strong>GitHub Repository:</strong> <a href="https://bayarmaa01.github.io/lpu/" target="_blank">CI/CD Pipeline Project</a></li>
         </ul>
-    </section>
+    </div>
     
-    <section id="education">
-        <h2>Education</h2>
+</section>
+
+<section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+        <div>
+            <h4>Languages:</h4>
+            <p>C++, Java, JavaScript, C</p>
+        </div>
+        <div>
+            <h4>Technologies/Frameworks:</h4>
+            <p>HTML, CSS, Node.js, Git, GitHub, Red Hat, Jenkins, Kubernetes</p>
+        </div>
+        <div>
+            <h4>Skills:</h4>
+            <p>Data Structures and Algorithms, Problem-Solving, Scripting in Python & JavaScript, CI/CD Pipeline Workflows</p>
+        </div>
+    </div>
+</section>
+
+<section id="experience">
+    <h2>Volunteer Experience</h2>
+    <div class="experience">
+        <h3>Uncage Mongolia NGO, Ulaanbaatar</h3>
+        <p><strong>Role:</strong> Volunteer (May 2023 - Aug 2023)</p>
         <ul>
-            <li><strong>Higher School</strong></li>
-            <li>Sep '09 - Mar '21</li>
-            <li>GENERAL EDUCATIONAL HIGH SCHOOL of Chuluut soum, Arkhangai province | Ulaanbaatar, MN</li>
-            <li>CGPA: 10</li>
+            <li>Contributed 120 hours of voluntary work focused on addressing problems faced by animals and the natural environment.</li>
+            <li>Promoted ecological balance through various activities and initiatives.</li>
+            <li>Assisted in improving social activities for young people in the capital city.</li>
+            <li>Collaborated with a team to implement solutions for environmental and social issues.</li>
         </ul>
-    </section>
-    
-    <section id="contact">
-        <h2><b>Contact</b></h2>
-        <p><b>Email:</b> <a href="mailto:B.bayarmaa0321@gmail.com">B.bayarmaa0321@gmail.com</a></p>
-        <p><b>Contact Number: </b><a href="tel:+917658055233">+91 7658055233</a></p>
-        <address>
-            Chingeltei District,<br>
-            Ulaanbaatar,
-            Mongolia
-        </address>
-    </section>
-    
-    <section id="declaration">
-        <h2>Declaration</h2>
-        <p>I hereby declare that the information provided is true and correct to the best of my knowledge.</p>
-    </section>
+    </div>
+</section>
+
+<section id="certificates">
+    <h2>Certificates</h2>
+    <ul>
+        <li><strong>Bayangol Park Voluntary Event</strong> - May 2023, UNCAGE NGO</li>
+        <li><strong>Trash Trucks Do Not Come in Nature Voluntary Event</strong> - May 2023, UNCAGE NGO</li>
+        <li><strong>Fundamentals of Management</strong> - Apr 2023, COURSERA</li>
+        <li><strong>Course Link:</strong> <a href="https://www.coursera.org/account/accomplishments/certificate/LHWBFRPTVCPB" target="_blank">Fundamentals of Management Certificate</a></li>
+    </ul>
+</section>
+
+<section id="education">
+    <h2>Education</h2>
+    <div class="education">
+        <h3>Lovely Professional University, Punjab</h3>
+        <p><strong>Program:</strong> Bachelor of Technology, Computer Science and Engineering (2022 - Present)</p>
+        <p><strong>CGPA:</strong> 6.80</p>
+        <h3>General Educational High School of Chuluut Soum</h3>
+        <p><strong>Graduation Year:</strong> 2021 | <strong>Percentage:</strong> 100%</p>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <p>Feel free to reach out to me for collaboration or any inquiries!</p>
+    <ul>
+        <li><strong>Email:</strong> <a href="mailto:B.Bayarmaa0321@gmail.com">B.Bayarmaa0321@gmail.com</a></li>
+        <li><strong>Phone:</strong> +91 7658055233</li>
+        <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/bayarmaa-bumandorj-998aa7264" target="_blank">LinkedIn Profile</a></li>
+        <li><strong>GitHub:</strong> <a href="https://github.com/bayarmaa01" target="_blank">GitHub Profile</a></li>
+    </ul>
+</section>
+
+</body>
+</html>
+
     
     <footer>
         <p>&copy; 2024 Bayarmaa's Portfolio</p>

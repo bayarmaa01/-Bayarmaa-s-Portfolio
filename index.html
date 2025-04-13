@@ -4,65 +4,139 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bayarmaa Bumandorj | Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        /* Reset some default browser styling */
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            box-sizing: border-box;
         }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
         nav {
-            background-color: #333;
+            background-color: #1f1f1f;
             color: white;
-            padding: 1rem;
+            padding: 1.5rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
         .nav-links {
             list-style: none;
             display: flex;
         }
+
         .nav-links li {
             margin-left: 20px;
         }
+
         .nav-links a {
             color: white;
             text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
         }
+
+        .nav-links a:hover {
+            background-color: #444;
+        }
+
         section {
-            padding: 2rem;
+            padding: 4rem;
             background-color: white;
-            margin: 1rem;
+            margin: 2rem auto;
+            max-width: 1100px;
             border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
+
         h2 {
+            color: #444;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            border-bottom: 2px solid #0066cc;
+            display: inline-block;
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
             color: #333;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
         }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+        }
+
         ul {
-            list-style: none;
-            padding-left: 0;
+            list-style-type: none;
+            padding: 0;
         }
+
         ul li {
             margin-bottom: 10px;
         }
+
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid #0066cc;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            display: block;
+            margin: 20px auto;
+        }
+
         .skills-grid {
             display: flex;
             justify-content: space-between;
+            gap: 20px;
         }
+
         .skills-grid div {
-            width: 30%;
+            flex-basis: 30%;
         }
-        .contact ul {
-            padding-left: 0;
-        }
-        .contact ul li {
-            margin-bottom: 5px;
-        }
-        a {
+
+        .skills-grid h4 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
             color: #0066cc;
+        }
+
+        .project, .experience, .education {
+            margin-bottom: 2rem;
+        }
+
+        footer {
+            background-color: #1f1f1f;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
         }
     </style>
 </head>
@@ -88,24 +162,22 @@
 
 <section id="projects">
     <h2>Projects</h2>
-    
     <div class="project">
         <h3>CI/CD Pipeline for Automated Deployment</h3>
-        <p>Developed a continuous integration and continuous deployment (CI/CD) pipeline using GitHub Actions to automate build, test, and deployment processes for a web application.</p>
+        <p>Developed a CI/CD pipeline using GitHub Actions to automate build, test, and deployment processes for a web app.</p>
         <ul>
             <li><strong>Technologies Used:</strong> GitHub Actions, Docker, Kubernetes, Jenkins</li>
             <li><strong>Key Features:</strong>
                 <ul>
-                    <li>Automated build and testing of code on every push to the repository</li>
-                    <li>Containerized application using Docker</li>
-                    <li>Deployed application to a Kubernetes cluster</li>
-                    <li>Integrated notifications for build and deployment status</li>
+                    <li>Automated build and testing on each push</li>
+                    <li>Containerized app using Docker</li>
+                    <li>Deployed to Kubernetes cluster</li>
+                    <li>Build & deploy status notifications</li>
                 </ul>
             </li>
-            <li><strong>GitHub Repository:</strong> <a href="https://bayarmaa01.github.io/lpu/" target="_blank">CI/CD Pipeline Project</a></li>
+            <li><strong>GitHub:</strong> <a href="https://bayarmaa01.github.io/lpu/" target="_blank">CI/CD Pipeline Project</a></li>
         </ul>
     </div>
-    
 </section>
 
 <section id="skills">
@@ -120,8 +192,8 @@
             <p>HTML, CSS, Node.js, Git, GitHub, Red Hat, Jenkins, Kubernetes</p>
         </div>
         <div>
-            <h4>Skills:</h4>
-            <p>Data Structures and Algorithms, Problem-Solving, Scripting in Python & JavaScript, CI/CD Pipeline Workflows</p>
+            <h4>Core Skills:</h4>
+            <p>DSA, Problem-Solving, Python & JS Scripting, CI/CD Workflows</p>
         </div>
     </div>
 </section>
@@ -132,10 +204,10 @@
         <h3>Uncage Mongolia NGO, Ulaanbaatar</h3>
         <p><strong>Role:</strong> Volunteer (May 2023 - Aug 2023)</p>
         <ul>
-            <li>Contributed 120 hours of voluntary work focused on addressing problems faced by animals and the natural environment.</li>
-            <li>Promoted ecological balance through various activities and initiatives.</li>
-            <li>Assisted in improving social activities for young people in the capital city.</li>
-            <li>Collaborated with a team to implement solutions for environmental and social issues.</li>
+            <li>Contributed 120 hours to environmental & animal welfare initiatives</li>
+            <li>Promoted ecological balance through activities & awareness</li>
+            <li>Improved youth participation in social activities</li>
+            <li>Collaborated with teams to develop sustainable solutions</li>
         </ul>
     </div>
 </section>
@@ -143,10 +215,10 @@
 <section id="certificates">
     <h2>Certificates</h2>
     <ul>
-        <li><strong>Bayangol Park Voluntary Event</strong> - May 2023, UNCAGE NGO</li>
-        <li><strong>Trash Trucks Do Not Come in Nature Voluntary Event</strong> - May 2023, UNCAGE NGO</li>
+        <li><strong>Bayangol Park Volunteer Event</strong> - May 2023, UNCAGE NGO</li>
+        <li><strong>Trash Trucks Do Not Come in Nature</strong> - May 2023, UNCAGE NGO</li>
         <li><strong>Fundamentals of Management</strong> - Apr 2023, COURSERA</li>
-        <li><strong>Course Link:</strong> <a href="https://www.coursera.org/account/accomplishments/certificate/LHWBFRPTVCPB" target="_blank">Fundamentals of Management Certificate</a></li>
+        <li><strong>Certificate:</strong> <a href="https://www.coursera.org/account/accomplishments/certificate/LHWBFRPTVCPB" target="_blank">View Certificate</a></li>
     </ul>
 </section>
 
@@ -154,7 +226,7 @@
     <h2>Education</h2>
     <div class="education">
         <h3>Lovely Professional University, Punjab</h3>
-        <p><strong>Program:</strong> Bachelor of Technology, Computer Science and Engineering (2022 - Present)</p>
+        <p><strong>Program:</strong> B.Tech, CSE (2022 - Present)</p>
         <p><strong>CGPA:</strong> 6.80</p>
         <h3>General Educational High School of Chuluut Soum</h3>
         <p><strong>Graduation Year:</strong> 2021 | <strong>Percentage:</strong> 100%</p>
@@ -172,14 +244,9 @@
     </ul>
 </section>
 
+<footer>
+    <p>&copy; 2024 Bayarmaa's Portfolio</p>
+</footer>
+
 </body>
 </html>
-
-    
-    <footer>
-        <p>&copy; 2024 Bayarmaa's Portfolio</p>
-    </footer>
-    <script src="script.js"></script>
-</body>
-</html>
-

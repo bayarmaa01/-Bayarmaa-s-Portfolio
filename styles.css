@@ -1,4 +1,4 @@
-/* Reset some default browser styling */
+/* Reset some default styles */
 * {
     margin: 0;
     padding: 0;
@@ -10,20 +10,8 @@ body {
     line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
-    margin: 0;
-    padding: 0;
-}
-.profile-pic {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%; /* Makes the image circular */
-    border: 3px solid #0066cc; /* Adds a blue border */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
-    display: block;
-    margin: 20px auto; /* Centers the image */
 }
 
-/* Navigation bar styling */
 nav {
     background-color: #1f1f1f;
     color: white;
@@ -31,6 +19,11 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 .nav-links {
@@ -54,12 +47,6 @@ nav {
     background-color: #444;
 }
 
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-/* General section styling */
 section {
     padding: 4rem;
     background-color: white;
@@ -87,12 +74,6 @@ h3 {
 p {
     margin-bottom: 1.5rem;
     font-size: 1rem;
-    line-height: 1.7;
-}
-
-/* Project and experience sections */
-.project, .experience {
-    margin-bottom: 2rem;
 }
 
 ul {
@@ -113,6 +94,16 @@ a:hover {
     text-decoration: underline;
 }
 
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #0066cc;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: block;
+    margin: 20px auto;
+}
+
 .skills-grid {
     display: flex;
     justify-content: space-between;
@@ -129,61 +120,30 @@ a:hover {
     color: #0066cc;
 }
 
-/* Education section */
-.education {
-    background-color: #f9f9f9;
-    padding: 1rem;
-    border-left: 4px solid #0066cc;
+.project, .experience, .education {
     margin-bottom: 2rem;
 }
 
-.education h3 {
-    font-size: 1.5rem;
-    color: #333;
+footer {
+    background-color: #1f1f1f;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
 }
 
-.education p {
-    margin-bottom: 0.5rem;
-}
-
-/* Contact section */
-.contact ul {
-    padding-left: 0;
-}
-
-.contact ul li {
-    margin-bottom: 10px;
-}
-
-/* Media queries for responsiveness */
+/* Responsive Design */
 @media (max-width: 768px) {
     .skills-grid {
         flex-direction: column;
     }
 
-    nav {
-        flex-direction: column;
-        text-align: center;
-    }
-
     .nav-links {
         flex-direction: column;
-        margin-top: 1rem;
+        align-items: flex-start;
     }
 
     .nav-links li {
         margin: 10px 0;
     }
 }
-
-
-footer {
-    background-color: white;
-    color: black;
-    text-align: center;
-    padding: 10px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-

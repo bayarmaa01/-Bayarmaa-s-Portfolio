@@ -1,257 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bayarmaa Bumandorj | Portfolio</title>
-    <style>
-        /* Reset some default browser styling */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-
-        nav {
-            background-color: #1f1f1f;
-            color: white;
-            padding: 1.5rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-
-        .nav-links {
-            list-style: none;
-            display: flex;
-        }
-
-        .nav-links li {
-            margin-left: 20px;
-        }
-
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            background-color: #444;
-        }
-
-        section {
-            padding: 4rem;
-            background-color: white;
-            margin: 2rem auto;
-            max-width: 1100px;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        h2 {
-            color: #444;
-            margin-bottom: 1.5rem;
-            font-size: 2rem;
-            border-bottom: 2px solid #0066cc;
-            display: inline-block;
-            padding-bottom: 0.5rem;
-        }
-
-        h3 {
-            color: #333;
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-        }
-
-        p {
-            margin-bottom: 1.5rem;
-            font-size: 1rem;
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        ul li {
-            margin-bottom: 10px;
-        }
-
-        a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        .profile-pic {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            border: 3px solid #0066cc;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-            display: block;
-            margin: 20px auto;
-        }
-
-        .skills-grid {
-            display: flex;
-            justify-content: space-between;
-            gap: 20px;
-        }
-
-        .skills-grid div {
-            flex-basis: 30%;
-        }
-
-        .skills-grid h4 {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-            color: #0066cc;
-        }
-
-        .project, .experience, .education {
-            margin-bottom: 2rem;
-        }
-
-        footer {
-            background-color: #1f1f1f;
-            color: white;
-            text-align: center;
-            padding: 1rem;
-            margin-top: 2rem;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bayarmaa | Bachelor's Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
 </head>
 <body>
 
-<nav>
-    <div class="logo">Bayarmaa Bumandorj</div>
+  <nav class="navbar">
+    <div class="logo">Bayarmaa</div>
     <ul class="nav-links">
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#certificates">Certificates</a></li>
-        <li><a href="#contact">Contact</a></li>
+      <li><a onclick="showSection('about')">About</a></li>
+      <li><a onclick="showSection('skills')">Skills</a></li>
+      <li><a onclick="showSection('projects')">Projects</a></li>
+      <li><a onclick="showSection('certificates')">Certificates</a></li>
+      <li><a onclick="showSection('cv')">CV</a></li>
+      <li><a onclick="showSection('contact')">Contact</a></li>
     </ul>
-</nav>
+    <button id="toggleTheme">🌙</button>
+  </nav>
 
-<section id="about">
+  <section id="about" class="section fade-in">
     <h2>About Me</h2>
-    <img src="zurag.jpg" alt="Bayarmaa Bumandorj" class="profile-pic">
-    <p>Hello! I’m Bayarmaa Bumandorj, a passionate Computer Science and Engineering student from Lovely Professional University. I enjoy creating automation solutions, contributing to open-source projects, and addressing environmental issues through volunteer work. My journey in software development is driven by curiosity and a desire to solve real-world problems using technology.</p>
-</section>
-
-<section id="projects">
-    <h2>Projects</h2>
-    <div class="project">
-        <h3>CI/CD Pipeline for Automated Deployment</h3>
-        <p>Developed a CI/CD pipeline using GitHub Actions to automate build, test, and deployment processes for a web app.</p>
-        <ul>
-            <li><strong>Technologies Used:</strong> GitHub Actions, Docker, Kubernetes, Jenkins</li>
-            <li><strong>Key Features:</strong>
-                <ul>
-                    <li>Automated build and testing on each push</li>
-                    <li>Containerized app using Docker</li>
-                    <li>Deployed to Kubernetes cluster</li>
-                    <li>Build & deploy status notifications</li>
-                </ul>
-            </li>
-            <li><strong>GitHub:</strong> <a href="https://bayarmaa01.github.io/lpu/" target="_blank">CI/CD Pipeline Project</a></li>
-        </ul>
+  
+    <div class="about-container">
+      <div class="about-image">
+        <img src="about.jpg" alt="Bayarmaa Profile Picture" class="profile-rounded" />
+      </div>
+  
+      <div class="about-text">
+        <h3>Bayarmaa Bumandorj</h3>
+        <p>
+          I'm a <strong>Bachelor's student in DevOps Engineering</strong> at Lovely Professional University with a passion for automation, CI/CD pipelines, and creating impactful digital solutions. I’m driven by a mission to blend technology with purpose — especially through volunteering, community impact, and collaboration.
+        </p>
+        <p>
+          I've built CI/CD pipelines using GitHub Actions, Docker, and Kubernetes, and contributed to projects that address real-world problems. Outside tech, I’ve spent 120+ hours volunteering with UNCAGE NGO to help protect the environment and animals.
+        </p>
+        <div class="about-tags">
+          <span>DevOps Enthusiast</span>
+          <span>Volunteer</span>
+          <span>Open Source</span>
+          <span>Team Player</span>
+        </div>
+      </div>
     </div>
-</section>
+  </section>
+  
 
-<section id="skills">
+  <section id="skills" class="section fade-in">
     <h2>Skills</h2>
+  
     <div class="skills-grid">
-        <div>
-            <h4>Languages:</h4>
-            <p>C++, Java, JavaScript, Python, C</p>
-        </div>
-        <div>
-            <h4>Technologies/Frameworks:</h4>
-            <p>HTML, CSS, Node.js, Git, GitHub, Red Hat, Jenkins, Kubernetes</p>
-        </div>
-        <div>
-            <h4>Core Skills:</h4>
-            <p>DSA, Problem-Solving, Python & JS Scripting, CI/CD Workflows</p>
-        </div>
-    </div>
-</section>
-
-<section id="experience">
-    <h2>Volunteer Experience</h2>
-    <div class="experience">
-        <h3>Uncage Mongolia NGO, Ulaanbaatar</h3>
-        <p><strong>Role:</strong> Volunteer (May 2023 - Aug 2023)</p>
+      <div class="skill-category">
+        <h3>Languages</h3>
         <ul>
-            <li>Contributed 120 hours to environmental & animal welfare initiatives</li>
-            <li>Promoted ecological balance through activities & awareness</li>
-            <li>Improved youth participation in social activities</li>
-            <li>Collaborated with teams to develop sustainable solutions</li>
+          <li>Python</li>
+          <li>C++</li>
+          <li>Java</li>
+          <li>JavaScript</li>
         </ul>
+      </div>
+  
+      <div class="skill-category">
+        <h3>DevOps & Tools</h3>
+        <ul>
+          <li>Git & GitHub</li>
+          <li>Docker</li>
+          <li>Kubernetes</li>
+          <li>Jenkins</li>
+          <li>GitHub Actions</li>
+        </ul>
+      </div>
+  
+      <div class="skill-category">
+        <h3>Soft Skills</h3>
+        <ul>
+          <li>Time Management</li>
+          <li>Team Collaboration</li>
+          <li>Public Speaking</li>
+          <li>Critical Thinking</li>
+        </ul>
+      </div>
     </div>
-</section>
+  </section>
+  
 
-<section id="certificates">
+  <section id="projects" class="section fade-in">
+    <h2>Projects</h2>
+  
+    <div class="project-gallery">
+  
+      <div class="project-item">
+        <img src="project.jpg" alt="CI/CD Pipeline Project" />
+        <div class="project-content">
+          <h3>CI/CD Pipeline for Cloud App</h3>
+          <p>Built a CI/CD pipeline using GitHub Actions, Docker, and Kubernetes for a scalable cloud app. Improved deployment speed by 60% and ensured automated testing and rollback safety.</p>
+          <a href="https://bayarmaa01.github.io/lpu/" target="_blank">🔗 View Live Project</a>
+        </div>
+      </div>
+  
+      <div class="project-item">
+        <img src="project2.png" alt="DevOps CI/CD Pipeline" />
+        <div class="project-content">
+          <h3>DevOps CI/CD Pipeline with Docker & Jenkins</h3>
+          <p>
+            Successfully implemented a complete DevOps pipeline integrating <strong>Jenkins</strong> for continuous integration and <strong>Docker</strong> for containerized deployment. The pipeline automatically builds, tests, and deploys updates to a live environment.
+          </p>
+          <p><strong>Technologies:</strong> Jenkins, GitHub, Docker, Shell Scripting</p>
+          <a href="https://github.com/bayarmaa01/int_project.git" target="_blank">🔗 GitHub Repository</a><br />
+          <a href="project2.pdf" download>📄 Download Project Report</a>
+        </div>
+      </div>
+      <div class="project-item">
+        <img src="project3.jpg" alt="Containerized CI/CD Pipeline" />
+        <div class="project-content">
+          <h3>Containerized CI/CD Pipeline in the Cloud (Capstone Project)</h3>
+          <p>
+            <em><strong>Interview Answer – Skill Improvement:</strong></em><br />
+            Recently, I improved my automation and DevOps skills while working on my capstone project. The project involved building a containerized CI/CD pipeline to streamline software deployment in a cloud environment.
+          </p>
+          <p>
+            I enhanced my expertise in tools like <strong>Jenkins</strong>, <strong>Docker</strong>, and <strong>Ansible</strong>, and deployed our solution on <strong>AWS EC2</strong> instances. I learned how to automate code integration, testing, and containerized deployment in a cloud-based pipeline.
+          </p>
+          <p>
+            Additionally, I gained hands-on experience in troubleshooting pipeline failures, configuring cloud infrastructure, and optimizing workflows for better performance and scalability.
+          </p>
+          <p>
+            By applying these skills, I successfully automated the deployment process, reduced manual effort, and improved software delivery speed. This experience also deepened my real-world understanding of CI/CD and cloud DevOps.
+          </p>
+          <p><strong>Tools Used:</strong> Jenkins, Docker, Ansible, GitHub, <strong>AWS EC2</strong></p>
+          
+        </div>
+      </div>
+      
+      
+      
+  </section>
+  
+
+  <section id="certificates" class="section fade-in">
     <h2>Certificates</h2>
-    <ul>
-        <li><strong>Bayangol Park Volunteer Event</strong> - May 2023, UNCAGE NGO</li>
-        <li><strong>Trash Trucks Do Not Come in Nature</strong> - May 2023, UNCAGE NGO</li>
-        <li><strong>Fundamentals of Management</strong> - Apr 2023, COURSERA</li>
-        <li><strong>Certificate:</strong> <a href="https://www.coursera.org/account/accomplishments/certificate/LHWBFRPTVCPB" target="_blank">View Certificate</a></li>
-    </ul>
-</section>
-
-<section id="education">
-    <h2>Education</h2>
-    <div class="education">
-        <h3>Lovely Professional University, Punjab</h3>
-        <p><strong>Program:</strong> B.Tech, CSE (2022 - Present)</p>
-        <p><strong>CGPA:</strong> 6.80</p>
-        <h3>General Educational High School of Chuluut Soum</h3>
-        <p><strong>Graduation Year:</strong> 2021 | <strong>Percentage:</strong> 100%</p>
+    <div class="certificate-list">
+      <div class="certificate-item">
+        <img src="certificate1.jpg" alt="Certificate 1">
+        <p>Linux Fundamentals – Lovely Professional University</p>
+      </div>
+      <div class="certificate-item">
+        <img src="certificate2.jpg" alt="Certificate 2">
+        <p>Azure Fundamentals – Microsoft</p>
+      </div>
+      <div class="certificate-item">
+        <img src="certificate3.jpg" alt="Certificate 3">
+        <p>Fundamentals of Management – Coursera</p>
+      </div>
+      <div class="certificate-item">
+        <img src="certificate4.jpg" alt="Certificate 4">
+        <p>120-Hour Volunteering – UNCAGE NGO</p>
+      </div>
     </div>
-</section>
-<section id="cv">
-  <h2>My CV</h2>
-  <p>Click the button below to download my resume:</p>
-  <a href="CV2.pdf" download class="download-btn">Download CV (PDF)</a>
-</section>
+  </section>
 
-<section id="contact">
+  <section id="cv" class="section fade-in">
+    <h2>My CV</h2>
+    <p><a href="CV2.pdf" download>📄 Download My CV</a></p>
+  
+    <div class="cv-wrapper">
+      <iframe
+      id="cvFrame"
+      src="CV2.pdf#toolbar=0"
+      class="collapsed"
+      title="Bayarmaa CV"
+      ></iframe>
+    
+    
+      <button id="toggleCvBtn">🔍 View Full CV</button>
+    </div>
+  </section>
+  
+
+  <section id="contact" class="section fade-in">
     <h2>Contact</h2>
-    <p>Feel free to reach out to me for collaboration or any inquiries!</p>
-    <ul>
-        <li><strong>Email:</strong> <a href="mailto:B.Bayarmaa0321@gmail.com">B.Bayarmaa0321@gmail.com</a></li>
-        <li><strong>Phone:</strong> +91 7658055233</li>
-        <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/bayarmaa-bumandorj-998aa7264" target="_blank">LinkedIn Profile</a></li>
-        <li><strong>GitHub:</strong> <a href="https://github.com/bayarmaa01" target="_blank">GitHub Profile</a></li>
-    </ul>
-</section>
+    <div class="contact-card">
+      <div class="contact-item">
+        <h3>Email</h3>
+        <p><a href="mailto:Bayarmaa0321@gmail.com">Bayarmaa0321@gmail.com</a></p>
+      </div>
+      <div class="contact-item">
+        <h3>Phone</h3>
+        <p>+91-7658055233</p>
+      </div>
+      <div class="contact-item">
+        <h3>LinkedIn</h3>
+        <p><a href="https://linkedin.com/in/bayarmaa-bumandorj-998aa7264" target="_blank">linkedin.com/in/bayarmaa-bumandorj</a></p>
+      </div>
+      <div class="contact-item">
+        <h3>GitHub</h3>
+        <p><a href="https://github.com/bayarmaa01" target="_blank">@bayarmaa01</a></p>
+      </div>
+    </div>
+  </section>
+  
 
-<footer>
-    <p>&copy; 2025 Bayarmaa's Portfolio</p>
-</footer>
+  <footer>
+    <p>&copy; 2025 Bayarmaa | Bayarmaa's Portfolio</p>
+  </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
